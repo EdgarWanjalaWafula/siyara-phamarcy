@@ -1,0 +1,14 @@
+@font-face {
+    font-family: Larke Regular;
+    src: url(../font/larke_neue/Regular.ttf);
+}
+
+@font-face {
+    font-family: Larke Thin;
+    src: url(../font/larke_neue/Thin.ttf);
+}
+
+@font-face {
+    font-family: Larke Bold;
+    src: url(../font/larke_neue/Bold.ttf);
+}

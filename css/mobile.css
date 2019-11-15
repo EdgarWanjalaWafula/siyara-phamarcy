@@ -1,0 +1,109 @@
+/* // Extra small devices (portrai phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    /*--------------------------------------------------------------
+    ## Header
+    --------------------------------------------------------------*/
+    .remove-padding-x {
+        padding: 0px 16px;
+    }
+    
+    .cat-menu, .dbp-menu, .slider-price{
+        display:none; 
+    }
+
+    .custom-logo-link img {
+        margin: 0px auto;
+        display: block;
+    }
+    
+    .mobile-toggle-button, .slider-cta-buttons, .shop-now-box, .before-shop-loop{
+        display:block; 
+    }
+
+    .dbp-header .col-md-4 {
+        margin: 26px 0px 16px;
+    }
+
+    .shop-now-text {
+        margin: unset;
+    }
+
+    .shop-now-text h5 {
+        font-size: 25px;
+        font-weight: 600;
+        margin: 18px 0px 10px;
+    }
+
+    .take-your-pick .card {
+        margin: 0px 0px 24px;
+        overflow: hidden;
+    }
+
+    /*--------------------------------------------------------------
+    ## Homepage 
+    --------------------------------------------------------------*/
+    .slider-cta-buttons .btn {
+        width:75%;
+        margin-bottom: 16px;
+    }
+
+    .dbp-newsletter, .padding-primary {
+        padding: 35px 0px;
+    }
+
+    .our-values .card {
+        margin: 0px 0px 16px;
+    }
+
+    [class*="offset-"]{
+        margin-left:unset;
+    }
+
+    .slider-item h2 {
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 10px;
+        top: 50px;
+        opacity: 0;
+    }
+
+    .take-your-pick .col-md-6::before {
+        height: calc(100% - 24px);
+    }
+
+    .dbp-newsletter {
+        margin-bottom: 650px;
+    }
+
+    .before-shop-loop {
+        margin: 16px 0px 16px;
+    }
+
+    .remove-left-padding {
+        padding-left:16px;
+    }
+
+    .toggle-cart {
+        width: 75%;
+        padding: 24px;
+    }
+    /*--------------------------------------------------------------
+    ## Footer 
+    --------------------------------------------------------------*/
+    .footer-contact-information {
+        margin-top: 24px !important;
+    }
+
+}
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+}

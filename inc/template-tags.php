@@ -146,3 +146,46 @@ if ( ! function_exists( 'siyara_phamarcy_post_thumbnail' ) ) :
 		endif; // End is_singular().
 	}
 endif;
+
+if(! function_exists('siyara_custom_logo')):
+	function siyara_custom_logo(){
+
+		// Show custom logo 
+		?>
+			<a class="siyara-custom-logo" href="<?php echo home_url(); ?>">
+				<h2 class="m-0">SIYARA <span>PHARMACY</span></h2>
+			</a>
+		<?php 
+	}
+endif; 
+
+
+function show_services_business(){
+	$servicesbusiness = array(
+		'post_type' 			=> 	'services', 
+		'posts_per_page'		=> 	-1, 
+	);	
+	
+	$loop = new WP_QUERY($servicesbusiness); 
+
+	$output = ""; 
+
+	$output .=  "<ul class='services-sidebar list-unstyled'>"; 
+	
+	while($loop->have_posts()): $loop->the_post(); 
+		$output .= "<li><a class=''";
+		$output .= "href='"; 
+		$output .= get_the_permalink(); 
+		$output .= "'>"; 
+		$output .= get_the_title();
+		$output .= "</a></li>"; 
+	endwhile; 
+	
+	$output .= "</ul>"; 
+
+	wp_reset_postdata(); 
+
+	return $output;
+}
+
+add_shortcode('show-services-business', 'show_services_business' ); 
