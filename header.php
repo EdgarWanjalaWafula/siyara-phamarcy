@@ -45,9 +45,34 @@
 							) );
 						?>
 					</nav><!-- #site-navigation -->
+
+					<!-- Mobile toggle  -->
+					<div class="mobile-toggle-bars">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
 				</div>
 			</div>	
 		</div>
 	</header><!-- #masthead -->
+
+	<section class="mobile-menu-panel">
+		<nav id="site-navigation" class="mobile-menu">
+			<?php
+				wp_nav_menu( array(
+					'theme_location' 	=> 'menu-4',
+					'menu_id'			=> 'mobile-menu',
+					'menu_class'		=> 'list-unstyled',
+				) );
+			?>
+
+			<p class="small text-white">
+			Copyright &copy; Siyara Phamarcy
+			</p>
+		</nav><!-- #site-navigation -->
+	</section>
+
+
 
 	<div id="content" class="site-content">

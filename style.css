@@ -41,8 +41,8 @@ body{
 	box-shadow: 0px 0px 10px rgba(0,0,0,.2);
 }
 
-#primary-menu .menu-item a {
-	color: #000;
+.site-header .menu-item a {
+	color:black;
 }
 
 .siyara-custom-logo h2 {
@@ -320,12 +320,21 @@ a:hover{
 	color: #fff;
 }
 
+.inner-page .menu-item a {
+	color: white;
+}
+
+.site-header.inner-page.sticky .menu-item a{
+	color:black; 
+}
+
 /*--------------------------------------------------------------
 --> Page Title 
 --------------------------------------------------------------*/
 .siyara-page-title {
 	height: 60vh;
 	margin-bottom: 50px;
+	background-attachment:fixed;
 }
 
 .siyara-page-title::before{
@@ -342,7 +351,6 @@ a:hover{
 /*--------------------------------------------------------------
 --> Contact Us  
 --------------------------------------------------------------*/
-
 .contact-content h6 {
 	margin: 0px 0px 10px;
 	font-weight: 600;
@@ -524,4 +532,57 @@ aside .widget ul li:last-child {
 
 aside .widget ul li a {
     color: #151515;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.mobile-toggle-bars span {
+	background: #32b2b3;
+	width: 35px;
+	display: block;
+	height: 2px;
+	margin: 0px 0px 5px;
+}
+
+.mobile-toggle-bars {
+	position: fixed;
+	right: 16px;
+	top: 20px;	
+	display:none;
+	cursor: pointer;
+}
+
+.mobile-menu-panel {
+	position: fixed;
+	top: 0px;
+	height: 100%;
+	background: #008283;
+	width: 75%;
+	z-index:999;
+	transition-duration: 700ms;
+	transform: translateX(-100%);
+}
+
+.mobile-menu-panel.open {
+	transform: translateX(0px);
+}
+
+.mobile-menu li a {
+	color: #fff;
+	padding: 10px 0px 10px 32px;
+	display: block;
+}
+
+.mobile-menu li {
+	border-bottom: 1px solid #ffffff1a;
+}
+
+.mobile-menu-panel.open::before {
+	content: "";
+	position: absolute;
+	background: rgba(0,0,0,.7);
+	height: 100%;
+	width: 100%;
+	left: 100%;
 }

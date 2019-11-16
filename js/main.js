@@ -11,6 +11,7 @@ jQuery(document).ready(function($){
 	initSliders(); 
 	initReadMore(); 
 	fixedNavBar(); 
+	mobileToggle(); 
 
 	function initReadMore(){
 		$('.who-we-are').readmore({ 
@@ -61,6 +62,19 @@ jQuery(document).ready(function($){
 				$(".site-header").removeClass( "sticky" );
 			}
 		});
+	}
+
+	function mobileToggle(){
+		var openMenu = $(".mobile-toggle-bars");
+		var mobilePanel = $(".mobile-menu-panel");
+
+		openMenu.on("click", function(){
+			if($(mobilePanel).hasClass("open")){
+				mobilePanel.removeClass("open")
+			} else {
+				mobilePanel.addClass("open")
+			}
+		})
 	}
 });
 

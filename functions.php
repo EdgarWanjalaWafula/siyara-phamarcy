@@ -47,6 +47,7 @@ if ( ! function_exists( 'siyara_phamarcy_setup' ) ) :
 			'menu-1' => esc_html__( 'Primary', 'siyara-phamarcy' ),
 			'menu-2' => esc_html__( 'Secondary', 'siyara-phamarcy' ),
 			'menu-3' => esc_html__( 'Secondary', 'siyara-phamarcy' ),
+			'menu-4' => esc_html__( 'Mobile', 'siyara-phamarcy' ),
 		) );
 
 		/*
@@ -138,11 +139,13 @@ function siyara_phamarcy_scripts() {
 	wp_enqueue_style( 'siyara-phamarcy-font', get_template_directory_uri() .  '/css/custom-font.css'); 
 	wp_enqueue_style( 'siyara-phamarcy-icons', 'https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css'); 
 	wp_enqueue_style( 'siyara-phamarcy-icons', 'https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap'); 
-	wp_enqueue_style( 'siyara-phamarcy-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'siyara-phamarcy-style', get_stylesheet_uri() );	
+	wp_enqueue_style( 'siyara-phamarcy-mobile', get_template_directory_uri() .  '/css/mobile.css'); 
 
 	wp_enqueue_script( 'siyara-phamarcy-popper-js', get_template_directory_uri() . '/js/popper.min.js', array(), '', true );
 	wp_enqueue_script( 'siyara-phamarcy-bootstrap-js', get_template_directory_uri() . '/js/bootstrap.min.js', array(), '', true );
 	wp_enqueue_script( 'siyara-phamarcy-owl-js', get_template_directory_uri() . '/js/owl.carousel.min.js', array(), '', true );
+	wp_enqueue_script( 'siyara-phamarcy-readmore-js', get_template_directory_uri() . '/js/readmore.min.js', array(), '', true );
 	wp_enqueue_script( 'siyara-phamarcy-readmore-js', get_template_directory_uri() . '/js/readmore.min.js', array(), '', true );
 	wp_enqueue_script( 'siyara-phamarcy-custom-js', get_template_directory_uri() . '/js/main.js', array(), '', true );
 	wp_enqueue_script( 'siyara-phamarcy-parallax-js', get_template_directory_uri() . '/js/parallax.min.js', array(), '', true );
